@@ -8,9 +8,3 @@ class motor():
     def stop(self):
         print(f"Stopped rotating {self.motorName}")
 
-
-motor1 = motor('motor1')
-motor2 = motor('motor2')
-motorArm = motor('Arm')
-
-while true

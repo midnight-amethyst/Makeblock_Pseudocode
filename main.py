@@ -2,6 +2,7 @@ from robot import *
 
 motor1 = Motor('motor1')
 motor2 = Motor('motor2')
+motorGrabber = Motor('Grabber')
 motorArm = Motor('Arm')
 sensor = Sensor()
 
@@ -16,7 +17,8 @@ def turn():
     pass
 
 def grab():
-
+    # Grab
+    # Arm up
     return True
 
 def release():

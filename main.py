@@ -3,8 +3,7 @@ from robot import *
 motor1 = Motor('motor1')
 motor2 = Motor('motor2')
 motorArm = Motor('Arm')
-<<<<<<< Updated upstream
-=======
+
 sensor = Sensor()
 
 
@@ -26,7 +25,7 @@ def grab():
 def release():
     pass
 
->>>>>>> Stashed changes
+
 sensor = Sensor()
 
 

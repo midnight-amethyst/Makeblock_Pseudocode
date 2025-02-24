@@ -3,7 +3,7 @@ from robot import *
 motor1 = Motor('motor1')
 motor2 = Motor('motor2')
 motorArm = Motor('Arm')
-
+motorGrabber = Motor('Grabber')
 sensor = Sensor()
 
 
@@ -19,20 +19,26 @@ def turn():
 def grab():
     # Grab
     # Arm up
-
+    motorGrabber.run(50)
+    delay(1000)
+    motorGrabber.stop()
+    motorArm.run(100)
+    delay(1000)
+    motorArm.stop()
     return True
 
 def release():
-    pass
+    motorArm.run(-100)
+    delay(1000)
+    motorArm.stop()
+    motorGrabber.run(-50)
+    delay(1000)
+    motorGrabber.stop()
 
 sensor = Sensor()
 
 
 counter = 0
-
-
-def move():
-    pass
 
 while True:
 

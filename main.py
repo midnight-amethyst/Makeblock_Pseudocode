@@ -27,6 +27,14 @@ def release():
     pass
 
 >>>>>>> Stashed changes
+sensor = Sensor()
+
+
+counter = 0
+
+
+def move():
+    pass
 
 while True:
     pass

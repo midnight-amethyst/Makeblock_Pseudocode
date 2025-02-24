@@ -10,11 +10,43 @@ sensor = Sensor()
 counter = 0
 
 
-def move():
+
+def move(N):
+    motor1.run(100)
+    motor2.run(100)
+    delay(N)
+    
     pass
 
-def turn():
+def turn(Right):
+    if Right == True;
+        motor1.run(-100)
+        motor2.run(100)
+        delay(1000)
+        motor1.stop
+        motor2.stop
+    elif Right == False;
+        motor1.run(100)
+        motor2.run(-100)
+        delay(1000)
+        motor1.stop
+        motor2.stop
+    
     pass
+
+def sensing()
+    while distance >100 and len(distance_data)==0:
+        turn(False)
+    else:
+        distance_data.append(distance)
+        distance_data_sort = distance_data.sort()
+        if distance_data[-1] == distance_data_sort(0):
+            turn(False)
+        else:
+            turn()
+            
+       
+    
 
 def grab():
     # Grab
@@ -37,6 +69,7 @@ while True:
     # Release
 
     distance = sensor.measure_distance()
+    distance_data=[]
 
     # Move initial
     if distance >= 10 and counter < 30:
@@ -59,7 +92,6 @@ while True:
         motor1.stop()
         motor2.stop()
         release()
-
 
 
 
